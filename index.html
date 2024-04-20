@@ -152,5 +152,21 @@
   </footer>
 
   <script src="libr/bootstrap.min.js"></script>
+  <script src="libr/bootstrap.bundle.min.js"></script>
+  <script src="libr/jquery-3.7.1.min.js"></script>
+  <script src="libr/jquery.touchSwipe.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".feedbackCarusel").swipe( {
+        swipeLeft: function() {
+          $(this).carousel("next");
+        },
+        swipeRight: function() {
+          $(this).carousel("prev");
+        },
+        allowPageScroll: "vertical"
+      });
+    });
+    </script>
 </body>
 </html>
